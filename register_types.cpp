@@ -15,7 +15,7 @@
 
 // 模块初始化入口，由引擎构建系统在相应阶段调用。
 // 静态工具类声明为抽象类（@abstract），仅暴露静态方法，禁止实例化。
-void initialize_ext_tools_module(ModuleInitializationLevel p_level) {
+void initialize_extensions_module(ModuleInitializationLevel p_level) {
 	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
 		return;
 	}
@@ -32,6 +32,6 @@ void initialize_ext_tools_module(ModuleInitializationLevel p_level) {
 #endif // TOOLS_ENABLED
 }
 
-void uninitialize_ext_tools_module(ModuleInitializationLevel p_level) {
+void uninitialize_extensions_module(ModuleInitializationLevel p_level) {
 	// 本模块无全局单例或静态资源需要释放。
 }

@@ -1,9 +1,9 @@
-#ifndef EXT_TOOLS_REGISTER_TYPES_H
-#define EXT_TOOLS_REGISTER_TYPES_H
+#ifndef EXTENSIONS_REGISTER_TYPES_H
+#define EXTENSIONS_REGISTER_TYPES_H
 
 #include "modules/register_module_types.h"
 
-void initialize_ext_tools_module(ModuleInitializationLevel p_level);
-void uninitialize_ext_tools_module(ModuleInitializationLevel p_level);
+void initialize_extensions_module(ModuleInitializationLevel p_level);
+void uninitialize_extensions_module(ModuleInitializationLevel p_level);
 
-#endif // EXT_TOOLS_REGISTER_TYPES_H
+#endif // EXTENSIONS_REGISTER_TYPES_H
