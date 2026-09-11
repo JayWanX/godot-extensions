@@ -3,34 +3,33 @@
 #include "core/io/resource.h"
 #include "core/variant/variant.h"
 
-// 定义单个项目设置的元数据资源。
+/// 定义单个项目设置的元数据资源。
 class ProjectSetting : public Resource {
 	GDCLASS(ProjectSetting, Resource);
 
 	static void _bind_methods();
 
 public:
-	// 设置路径（含点号分隔的层级名）
+	/// 设置路径（含点号分隔的层级名）
 	String setting_path;
-	// 默认值（设置不存在时读取）
+	/// 默认值（设置不存在时读取）
 	Variant default_value;
-	// 值类型（Variant.Type 枚举）
+	/// 值类型（Variant.Type 枚举）
 	Variant::Type value_type = Variant::Type::NIL;
-	// 初始值（注册设置时写入）
+	/// 初始值（注册设置时写入）
 	Variant initial_value;
-	// 编辑器属性提示类型
+	/// 编辑器属性提示类型
 	PropertyHint type_hint = PropertyHint::PROPERTY_HINT_NONE;
-	// 编辑器属性提示字符串
+	/// 编辑器属性提示字符串
 	String hint_string;
-	// 是否显示在基础设置中
+	/// 是否显示在基础设置中
 	bool basic = true;
-	// 是否为内部设置
+	/// 是否为内部设置
 	bool internal = false;
-	// 修改后是否需要重启生效
+	/// 修改后是否需要重启生效
 	bool restart_if_changed = false;
 
 private:
-	// 属性访问器
 	String _get_setting_path() const { return setting_path; }
 	void _set_setting_path(const String &p_value) { setting_path = p_value; }
 
