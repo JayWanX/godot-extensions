@@ -1,28 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<class name="UUID" inherits="RefCounted" api_type="core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
-	<brief_description>
-		表示一个符合 UUID v4 格式的唯一标识符，基于 16 个随机字节编码为十六进制并用连字符分组。
-	</brief_description>
-	<description>
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="UUID" inherits="RefCounted" api_type="core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+    <brief_description>	表示一个符合 UUID v4 格式的唯一标识符，基于 16 个随机字节编码为十六进制并用连字符分组。</brief_description>
+    <description>
 	</description>
-	<tutorials>
-	</tutorials>
-	<methods>
-		<method name="equal_with" qualifiers="const">
-			<return type="bool" />
-			<param index="0" name="other" type="UUID" />
-			<description>
-				比较当前 UUID 与另一个 UUID 是否相等。
-	[param p_other] 用于比较的另一个 UUID
-	[return] 两者文本表示相同则返回 true。
-			</description>
-		</method>
-		<method name="generate" qualifiers="static">
-			<return type="StringName" />
-			<description>
-				生成一个新的随机 UUID。
-	[return] 格式化后的 UUID 文本，如 `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`。
-			</description>
-		</method>
-	</methods>
+    <tutorials>
+    </tutorials>
+    <methods>
+        <method name="equal_with" qualifiers="const">
+            <return type="bool" />
+            <param index="0" name="other" type="UUID" />
+            <description>	比较当前 UUID 与另一个 UUID 是否相等。
+	[param other] 用于比较的另一个 UUID
+	两者文本表示相同则返回 true。</description>
+        </method>
+        <method name="generate" qualifiers="static">
+            <return type="StringName" />
+            <description>	生成一个新的随机 UUID。
+	格式化后的 UUID 文本，如 `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`。</description>
+        </method>
+    </methods>
 </class>

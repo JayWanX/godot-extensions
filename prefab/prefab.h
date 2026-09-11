@@ -24,9 +24,9 @@ public:
 	};
 
 	/// 将指定节点及其子树打包为 PackedScene，并自动修复子节点的 owner 关系。
-	/// [param p_node] 要打包的根节点，不能为空
-	/// [param p_free_mode] 打包完成后对源节点的处理方式，见 FreeMode 枚举
-	/// [return] 打包好的 PackedScene 资源。
+	/// [param node] 要打包的根节点，不能为空
+	/// [param free_mode] 打包完成后对源节点的处理方式，见 FreeMode 枚举
+	/// 打包好的 PackedScene 资源。
 	static Ref<PackedScene> pack(Node *p_node, int p_free_mode = FREE_MODE_INSTANT);
 };
 

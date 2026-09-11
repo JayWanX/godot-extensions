@@ -1,53 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<class name="ProjectSettingsManager" inherits="Object" api_type="core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
-	<brief_description>
-		提供项目设置的批量注册、移除与读取。
-	</brief_description>
-	<description>
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="ProjectSettingsManager" inherits="Object" api_type="core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+    <brief_description>	提供项目设置的批量注册、移除与读取。</brief_description>
+    <description>
 	</description>
-	<tutorials>
-	</tutorials>
-	<methods>
-		<method name="add_setting" qualifiers="static">
-			<return type="void" />
-			<param index="0" name="project_setting" type="ProjectSetting" />
-			<description>
-				注册单个项目设置并保存到 ProjectSettings。
-	[param p_project_setting] 设置定义资源
-			</description>
-		</method>
-		<method name="add_settings" qualifiers="static">
-			<return type="void" />
-			<param index="0" name="project_settings" type="Array" />
-			<description>
-				批量注册项目设置，合并为一次保存。
-	[param p_project_settings] 设置定义列表
-			</description>
-		</method>
-		<method name="get_setting" qualifiers="static">
-			<return type="Variant" />
-			<param index="0" name="project_setting" type="ProjectSetting" />
-			<description>
-				读取项目设置的当前值。
-	[param p_project_setting] 设置定义资源
-	[return] 项目设置的当前值，不存在时返回默认值。
-			</description>
-		</method>
-		<method name="remove_setting" qualifiers="static">
-			<return type="void" />
-			<param index="0" name="project_setting" type="ProjectSetting" />
-			<description>
-				删除单个项目设置并保存。
-	[param p_project_setting] 设置定义资源
-			</description>
-		</method>
-		<method name="remove_settings" qualifiers="static">
-			<return type="void" />
-			<param index="0" name="project_settings" type="Array" />
-			<description>
-				批量删除项目设置，合并为一次保存。
-	[param p_project_settings] 设置定义列表
-			</description>
-		</method>
-	</methods>
+    <tutorials>
+    </tutorials>
+    <methods>
+        <method name="add_setting" qualifiers="static">
+            <return type="void" />
+            <param index="0" name="project_setting" type="ProjectSetting" />
+            <description>	注册单个项目设置并保存到 ProjectSettings。
+	[param project_setting] 设置定义资源</description>
+        </method>
+        <method name="add_settings" qualifiers="static">
+            <return type="void" />
+            <param index="0" name="project_settings" type="Array" />
+            <description>	批量注册项目设置，合并为一次保存。
+	[param project_settings] 设置定义列表</description>
+        </method>
+        <method name="get_setting" qualifiers="static">
+            <return type="Variant" />
+            <param index="0" name="project_setting" type="ProjectSetting" />
+            <description>	读取项目设置的当前值。
+	[param project_setting] 设置定义资源
+	项目设置的当前值，不存在时返回默认值。</description>
+        </method>
+        <method name="remove_setting" qualifiers="static">
+            <return type="void" />
+            <param index="0" name="project_setting" type="ProjectSetting" />
+            <description>	删除单个项目设置并保存。
+	[param project_setting] 设置定义资源</description>
+        </method>
+        <method name="remove_settings" qualifiers="static">
+            <return type="void" />
+            <param index="0" name="project_settings" type="Array" />
+            <description>	批量删除项目设置，合并为一次保存。
+	[param project_settings] 设置定义列表</description>
+        </method>
+    </methods>
 </class>

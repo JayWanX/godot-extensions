@@ -29,6 +29,28 @@ public:
 	/// 修改后是否需要重启生效
 	bool restart_if_changed = false;
 
+	/// 创建项目设置元数据资源。[br][br]
+	/// [param setting_path] 设置路径（含点号分隔的层级名）。[br]
+	/// [param default_value] 默认值（设置不存在时读取）。[br]
+	/// [param value_type] 值类型（Variant.Type 枚举）。[br]
+	/// [param initial_value] 初始值（注册设置时写入）。[br]
+	/// [param type_hint] 编辑器属性提示类型。[br]
+	/// [param hint_string] 编辑器属性提示字符串。[br]
+	/// [param basic] 是否显示在基础设置中。[br]
+	/// [param internal] 是否为内部设置。[br]
+	/// [param restart_if_changed] 修改后是否需要重启生效。[br]
+	/// 新创建的项目设置资源。
+	static Ref<ProjectSetting> create(
+			const String &p_setting_path = String(),
+			const Variant &p_default_value = Variant(),
+			Variant::Type p_value_type = Variant::Type::NIL,
+			const Variant &p_initial_value = Variant(),
+			PropertyHint p_type_hint = PropertyHint::PROPERTY_HINT_NONE,
+			const String &p_hint_string = String(),
+			bool p_basic = true,
+			bool p_internal = false,
+			bool p_restart_if_changed = false);
+
 private:
 	String _get_setting_path() const { return setting_path; }
 	void _set_setting_path(const String &p_value) { setting_path = p_value; }

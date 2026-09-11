@@ -16,13 +16,13 @@
 void EditorScriptExtension::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_tree"), &EditorScriptExtension::get_tree);
 	ClassDB::bind_method(D_METHOD("create_timer", "time_sec", "process_always", "process_in_physics", "ignore_time_scale"),
-			&EditorScriptExtension::create_timer);
+			&EditorScriptExtension::create_timer, DEFVAL(true), DEFVAL(false), DEFVAL(false));
 	ClassDB::bind_method(D_METHOD("create_tween"), &EditorScriptExtension::create_tween);
 	ClassDB::bind_method(D_METHOD("create_window"), &EditorScriptExtension::create_window);
 	ClassDB::bind_method(D_METHOD("create_accept_dialog", "dialog_text", "title", "ok_button_text"),
-			&EditorScriptExtension::create_accept_dialog);
+			&EditorScriptExtension::create_accept_dialog, DEFVAL(""), DEFVAL(""));
 	ClassDB::bind_method(D_METHOD("create_confirmation_dialog", "dialog_text", "title", "ok_button_text"),
-			&EditorScriptExtension::create_confirmation_dialog);
+			&EditorScriptExtension::create_confirmation_dialog, DEFVAL(""), DEFVAL(""));
 	GDVIRTUAL_BIND(main);
 }
 

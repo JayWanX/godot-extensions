@@ -19,11 +19,11 @@ public:
 	UUID();
 
 	/// 比较当前 UUID 与另一个 UUID 是否相等。
-	/// [param p_other] 用于比较的另一个 UUID
-	/// [return] 两者文本表示相同则返回 true。
+	/// [param other] 用于比较的另一个 UUID
+	/// 两者文本表示相同则返回 true。
 	bool equal_with(const Ref<UUID> &p_other) const;
 
 	/// 生成一个新的随机 UUID。
-	/// [return] 格式化后的 UUID 文本，如 `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`。
+	/// 格式化后的 UUID 文本，如 `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`。
 	static StringName generate();
 };

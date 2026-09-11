@@ -1,32 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<class name="Prefab" inherits="Object" api_type="core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
-	<brief_description>
-		预制体工具类：提供将任意节点树打包为 PackedScene 的静态方法，不可实例化。
-	自动修复子节点的 owner 关系，确保打包后保留完整层级。
-	</brief_description>
-	<description>
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Prefab" inherits="Object" api_type="core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+    <brief_description>	预制体工具类：提供将任意节点树打包为 PackedScene 的静态方法，不可实例化。
+	自动修复子节点的 owner 关系，确保打包后保留完整层级。</brief_description>
+    <description>
 	</description>
-	<tutorials>
-	</tutorials>
-	<methods>
-		<method name="pack" qualifiers="static">
-			<return type="PackedScene" />
-			<param index="0" name="node" type="Node" />
-			<param index="1" name="free_mode" type="int" default="0" />
-			<description>
-				将指定节点及其子树打包为 PackedScene，并自动修复子节点的 owner 关系。
-	[param p_node] 要打包的根节点，不能为空
-	[param p_free_mode] 打包完成后对源节点的处理方式，见 FreeMode 枚举
-	[return] 打包好的 PackedScene 资源。
-			</description>
-		</method>
-	</methods>
-	<constants>
-		<constant name="FREE_MODE_INSTANT" value="0" enum="FreeMode">
+    <tutorials>
+    </tutorials>
+    <methods>
+        <method name="pack" qualifiers="static">
+            <return type="PackedScene" />
+            <param index="0" name="node" type="Node" />
+            <param index="1" name="free_mode" type="int" default="0" />
+            <description>	将指定节点及其子树打包为 PackedScene，并自动修复子节点的 owner 关系。
+	[param node] 要打包的根节点，不能为空
+	[param free_mode] 打包完成后对源节点的处理方式，见 FreeMode 枚举
+	打包好的 PackedScene 资源。</description>
+        </method>
+    </methods>
+    <constants>
+        <constant name="FREE_MODE_INSTANT" value="0" enum="FreeMode">
 		</constant>
-		<constant name="FREE_MODE_DEFERRED" value="1" enum="FreeMode">
+        <constant name="FREE_MODE_DEFERRED" value="1" enum="FreeMode">
 		</constant>
-		<constant name="FREE_MODE_NONE" value="2" enum="FreeMode">
+        <constant name="FREE_MODE_NONE" value="2" enum="FreeMode">
 		</constant>
-	</constants>
+    </constants>
 </class>

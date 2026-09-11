@@ -22,8 +22,8 @@ class FileUtils : public Object {
 public:
 	/// 判断文件是否可视为文本文件。
 	/// 先按扩展名/文件名做零 IO 快路径判定，未命中再读取文件头查 NUL 字节兜底。
-	/// [param p_file] 文件路径，可为系统绝对路径或 res:// 路径。
-	/// [param p_max_read_bytes] 读取文件头的最大字节数。
-	/// [return] 判定为文本文件则返回 true，否则（含文件不存在或无法打开）返回 false。
+	/// [param file] 文件路径，可为系统绝对路径或 res:// 路径。
+	/// [param max_read_bytes] 读取文件头的最大字节数。
+	/// 判定为文本文件则返回 true，否则（含文件不存在或无法打开）返回 false。
 	static bool is_text_file(const String &p_file, int p_max_read_bytes = 4096);
 };

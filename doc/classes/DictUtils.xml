@@ -1,23 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<class name="DictUtils" inherits="Object" api_type="core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
-	<brief_description>
-		字典工具类：提供字典结构相关的静态方法，不可实例化。
-	</brief_description>
-	<description>
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="DictUtils" inherits="Object" api_type="core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+    <brief_description>	字典工具类：提供字典结构相关的静态方法，不可实例化。</brief_description>
+    <description>
 	</description>
-	<tutorials>
-	</tutorials>
-	<methods>
-		<method name="has_same_keys_structure" qualifiers="static">
-			<return type="bool" />
-			<param index="0" name="dict1" type="Dictionary" />
-			<param index="1" name="dict2" type="Dictionary" />
-			<description>
-				检查两个字典的键结构是否完全一致（仅比较键形状，不比较值）。
-	[param p_dict1] 第一个字典
-	[param p_dict2] 第二个字典
-	[return] 键形状完全一致则返回 true。
-			</description>
-		</method>
-	</methods>
+    <tutorials>
+    </tutorials>
+    <methods>
+        <method name="has_same_keys_structure" qualifiers="static">
+            <return type="bool" />
+            <param index="0" name="dict1" type="Dictionary" />
+            <param index="1" name="dict2" type="Dictionary" />
+            <description>	检查两个字典的键结构是否完全一致（仅比较键形状，不比较值）。
+	[param dict1] 第一个字典
+	[param dict2] 第二个字典
+	键形状完全一致则返回 true。</description>
+        </method>
+    </methods>
 </class>

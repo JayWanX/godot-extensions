@@ -1,80 +1,66 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<class name="EditorScriptExtension" inherits="EditorScript" api_type="core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
-	<brief_description>
-		EditorScript 的便捷基类：统一管理生命周期并封装常用编辑器辅助方法。
-	GDScript 子类通过 extends EditorScriptExtension 重写 main() 实现具体逻辑。
-	</brief_description>
-	<description>
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="EditorScriptExtension" inherits="EditorScript" api_type="core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+    <brief_description>	EditorScript 的便捷基类：统一管理生命周期并封装常用编辑器辅助方法。
+	GDScript 子类通过 extends EditorScriptExtension 重写 main() 实现具体逻辑。</brief_description>
+    <description>
 	</description>
-	<tutorials>
-	</tutorials>
-	<methods>
-		<method name="create_accept_dialog">
-			<return type="AcceptDialog" />
-			<param index="0" name="dialog_text" type="String" />
-			<param index="1" name="title" type="String" />
-			<param index="2" name="ok_button_text" type="String" />
-			<description>
-				创建一个以编辑器为主控件为父级的确认框。
-	[param p_dialog_text] 对话框文本
-	[param p_title] 窗口标题
-	[param p_ok_button_text] 确认按钮文本
-	[return] 新建的 AcceptDialog，关闭时自动释放。
-			</description>
-		</method>
-		<method name="create_confirmation_dialog">
-			<return type="ConfirmationDialog" />
-			<param index="0" name="dialog_text" type="String" />
-			<param index="1" name="title" type="String" />
-			<param index="2" name="ok_button_text" type="String" />
-			<description>
-				创建一个"确定/取消"对话框。
-	[param p_dialog_text] 对话框文本
-	[param p_title] 窗口标题
-	[param p_ok_button_text] 确认按钮文本
-	[return] 新建的 ConfirmationDialog，关闭时自动释放。
-			</description>
-		</method>
-		<method name="create_timer">
-			<return type="SceneTreeTimer" />
-			<param index="0" name="time_sec" type="float" />
-			<param index="1" name="process_always" type="bool" />
-			<param index="2" name="process_in_physics" type="bool" />
-			<param index="3" name="ignore_time_scale" type="bool" />
-			<description>
-				创建场景树计时器。
-	[param p_time_sec] 计时秒数
-	[param p_process_always] 是否在时间缩放时仍计时
-	[param p_process_in_physics] 是否在物理帧更新
-	[param p_ignore_time_scale] 是否忽略时间缩放
-			</description>
-		</method>
-		<method name="create_tween">
-			<return type="Tween" />
-			<description>
-				创建场景树补间器。
-	[return] 新建的 Tween 补间器。
-			</description>
-		</method>
-		<method name="create_window">
-			<return type="Window" />
-			<description>
-				创建一个以编辑器为主控件为父级的窗口。
-	[return] 新建的 Window，关闭时自动释放。
-			</description>
-		</method>
-		<method name="get_tree">
-			<return type="SceneTree" />
-			<description>
-				获取当前主循环的 SceneTree。
-	[return] 当前主循环的 SceneTree。
-			</description>
-		</method>
-		<method name="main" qualifiers="virtual required">
-			<return type="void" />
-			<description>
-				供 GDScript 重写的抽象入口。
-			</description>
-		</method>
-	</methods>
+    <tutorials>
+    </tutorials>
+    <methods>
+        <method name="create_accept_dialog">
+            <return type="AcceptDialog" />
+            <param index="0" name="dialog_text" type="String" />
+            <param index="1" name="title" type="String" />
+            <param index="2" name="ok_button_text" type="String" />
+            <description>	创建一个以编辑器为主控件为父级的确认框。
+	[param dialog_text] 对话框文本
+	[param title] 窗口标题
+	[param ok_button_text] 确认按钮文本
+	新建的 AcceptDialog，关闭时自动释放。</description>
+        </method>
+        <method name="create_confirmation_dialog">
+            <return type="ConfirmationDialog" />
+            <param index="0" name="dialog_text" type="String" />
+            <param index="1" name="title" type="String" />
+            <param index="2" name="ok_button_text" type="String" />
+            <description>	创建一个"确定/取消"对话框。
+	[param dialog_text] 对话框文本
+	[param title] 窗口标题
+	[param ok_button_text] 确认按钮文本
+	新建的 ConfirmationDialog，关闭时自动释放。</description>
+        </method>
+        <method name="create_timer">
+            <return type="SceneTreeTimer" />
+            <param index="0" name="time_sec" type="float" />
+            <param index="1" name="process_always" type="bool" />
+            <param index="2" name="process_in_physics" type="bool" />
+            <param index="3" name="ignore_time_scale" type="bool" />
+            <description>	创建场景树计时器。
+	[param time_sec] 计时秒数
+	[param process_always] 是否在时间缩放时仍计时
+	[param process_in_physics] 是否在物理帧更新
+	[param ignore_time_scale] 是否忽略时间缩放</description>
+        </method>
+        <method name="create_tween">
+            <return type="Tween" />
+            <description>	创建场景树补间器。
+	新建的 Tween 补间器。</description>
+        </method>
+        <method name="create_window">
+            <return type="Window" />
+            <description>	创建一个以编辑器为主控件为父级的窗口。
+	新建的 Window，关闭时自动释放。</description>
+        </method>
+        <method name="get_tree">
+            <return type="SceneTree" />
+            <description>	获取当前主循环的 SceneTree。
+	当前主循环的 SceneTree。</description>
+        </method>
+        <method name="main" qualifiers="virtual required">
+            <return type="void" />
+            <description>	供 GDScript 重写的抽象入口。</description>
+        </method>
+    </methods>
 </class>

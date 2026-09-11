@@ -23,19 +23,19 @@ private:
 
 public:
 	/// 注册单个项目设置并保存到 ProjectSettings。
-	/// [param p_project_setting] 设置定义资源
+	/// [param project_setting] 设置定义资源
 	static void add_setting(const Ref<ProjectSetting> &p_project_setting);
 	/// 批量注册项目设置，合并为一次保存。
-	/// [param p_project_settings] 设置定义列表
+	/// [param project_settings] 设置定义列表
 	static void add_settings(const Array &p_project_settings);
 	/// 删除单个项目设置并保存。
-	/// [param p_project_setting] 设置定义资源
+	/// [param project_setting] 设置定义资源
 	static void remove_setting(const Ref<ProjectSetting> &p_project_setting);
 	/// 批量删除项目设置，合并为一次保存。
-	/// [param p_project_settings] 设置定义列表
+	/// [param project_settings] 设置定义列表
 	static void remove_settings(const Array &p_project_settings);
 	/// 读取项目设置的当前值。
-	/// [param p_project_setting] 设置定义资源
-	/// [return] 项目设置的当前值，不存在时返回默认值。
+	/// [param project_setting] 设置定义资源
+	/// 项目设置的当前值，不存在时返回默认值。
 	static Variant get_setting(const Ref<ProjectSetting> &p_project_setting);
 };
