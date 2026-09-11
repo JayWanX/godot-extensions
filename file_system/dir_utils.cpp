@@ -224,10 +224,14 @@ Dictionary DirUtils::get_directory_tree(const String &p_path) {
 		if (dir->current_is_dir()) {
 			const Dictionary sub_tree = get_directory_tree(full_path);
 			if (!sub_tree.is_empty()) {
-				((Array)result["directories"]).append(sub_tree);
+				Array directories = result["directories"];
+				directories.append(sub_tree);
+				result["directories"] = directories;
 			}
 		} else {
-			((Array)result["files"]).append(item);
+			Array files = result["files"];
+			files.append(item);
+			result["files"] = files;
 		}
 
 		item = dir->get_next();

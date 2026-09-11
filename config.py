@@ -13,6 +13,9 @@ def get_doc_classes():
         "FileUtils",
         "DirUtils",
         "Prefab",
+        "ProjectSetting",
+        "ProjectSettingsManager",
+        "EditorScriptExtension",
     ]
 
 
