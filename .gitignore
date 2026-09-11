@@ -15,4 +15,5 @@
 *.ilk
 
 __pycache__/
-compile_commands.json
+.trae/
+compile_commands.json.trae/
