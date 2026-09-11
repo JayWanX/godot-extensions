@@ -84,7 +84,14 @@ def format_doc_bbcodes_for_markdown(text, multiline, fmt):
             # Specific to voxel module
             elif bb_node.name == 'graph_node':
                 out += "`{0}`".format(bb_node.get_first_option_key())
-            
+
+            # 参数与返回值标签：渲染为加粗前缀
+            elif bb_node.name == 'param' and bb_node.is_opening():
+                out += "**{0}：**".format(bb_node.get_first_option_key())
+
+            elif bb_node.name == 'return' and bb_node.is_opening():
+                out += "**返回：**"
+
             elif bb_node.name == 'code':
                 out += '`'
                 in_code = bb_node.is_opening()

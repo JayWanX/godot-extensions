@@ -18,6 +18,7 @@ if sys.version_info < (3, 4):
     sys.exit(1)
 
 import xml_to_markdown
+import generate_docs_from_comments
 import subprocess
 import getopt
 import os
@@ -148,6 +149,8 @@ def main():
 
     if must_run_doctool:
         update_classes_xml(godot_executable, godot_repo_root, verbose)
+        # doctool 只生成方法签名骨架，描述需从头文件注释注入
+        generate_docs_from_comments.main()
         did_something = True
 
     if must_update_md_from_xml:

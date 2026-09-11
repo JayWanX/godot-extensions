@@ -5,7 +5,7 @@
 #include "core/variant/variant.h"
 #include "scene/resources/packed_scene.h"
 
-/// 预制体工具类：提供将任意节点树打包为 PackedScene 的静态方法，不可实例化。[br][br]
+/// 预制体工具类：提供将任意节点树打包为 PackedScene 的静态方法，不可实例化。
 /// 自动修复子节点的 owner 关系，确保打包后保留完整层级。
 class Prefab : public Object {
 	GDCLASS(Prefab, Object);
@@ -23,9 +23,9 @@ public:
 		FREE_MODE_NONE = 2,
 	};
 
-	/// 将指定节点及其子树打包为 PackedScene，并自动修复子节点的 owner 关系。[br][br]
-	/// [param p_node] 要打包的根节点，不能为空[br]
-	/// [param p_free_mode] 打包完成后对源节点的处理方式，见 FreeMode 枚举[br]
+	/// 将指定节点及其子树打包为 PackedScene，并自动修复子节点的 owner 关系。
+	/// [param p_node] 要打包的根节点，不能为空
+	/// [param p_free_mode] 打包完成后对源节点的处理方式，见 FreeMode 枚举
 	/// [return] 打包好的 PackedScene 资源。
 	static Ref<PackedScene> pack(Node *p_node, int p_free_mode = FREE_MODE_INSTANT);
 };

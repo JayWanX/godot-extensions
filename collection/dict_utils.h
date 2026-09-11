@@ -13,9 +13,9 @@ class DictUtils : public Object {
 	static Dictionary _extract_key_structure(const Dictionary &p_dict);
 
 public:
-	/// 检查两个字典的键结构是否完全一致（仅比较键形状，不比较值）。[br][br]
-	/// [param p_dict1] 第一个字典[br]
-	/// [param p_dict2] 第二个字典[br]
+	/// 检查两个字典的键结构是否完全一致（仅比较键形状，不比较值）。
+	/// [param p_dict1] 第一个字典
+	/// [param p_dict2] 第二个字典
 	/// [return] 键形状完全一致则返回 true。
 	static bool has_same_keys_structure(const Dictionary &p_dict1, const Dictionary &p_dict2);
 };
