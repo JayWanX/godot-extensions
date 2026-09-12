@@ -2,9 +2,6 @@
 
 #include "core/object/class_db.h"
 
-#ifdef TOOLS_ENABLED
-#include "editor_script/editor_script_extension.h"
-#endif // TOOLS_ENABLED
 #include "collection/dict_utils.h"
 #include "file_system/dir_utils.h"
 #include "file_system/file_utils.h"
@@ -27,9 +24,6 @@ void initialize_extensions_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_abstract_class<Prefab>();
 	ClassDB::register_class<ProjectSetting>();
 	ClassDB::register_abstract_class<ProjectSettingsManager>();
-#ifdef TOOLS_ENABLED
-	ClassDB::register_class<EditorScriptExtension>();
-#endif // TOOLS_ENABLED
 }
 
 void uninitialize_extensions_module(ModuleInitializationLevel p_level) {

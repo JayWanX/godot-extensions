@@ -15,7 +15,6 @@ def get_doc_classes():
         "Prefab",
         "ProjectSetting",
         "ProjectSettingsManager",
-        "EditorScriptExtension",
     ]
 
 
