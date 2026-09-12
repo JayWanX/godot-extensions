@@ -4,6 +4,8 @@
 *.log
 *.o
 *.obj
+*.os
+*.so
 *.pyc
 *.tmp
 *.dblite
@@ -13,7 +15,11 @@
 *.pdb
 *.dll
 *.ilk
+*.gen.*
 
 __pycache__/
 .trae/
 compile_commands.json
+.godot/
+.sconsign*.dblite
+custom.py
