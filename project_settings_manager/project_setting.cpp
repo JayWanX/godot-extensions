@@ -2,6 +2,21 @@
 
 #include "core/object/class_db.h"
 
+Variant ProjectSetting::convert_value_type(const Variant &p_value, Variant::Type p_type) {
+	switch (p_type) {
+		case Variant::Type::BOOL:
+			return bool(p_value);
+		case Variant::Type::INT:
+			return int64_t(p_value);
+		case Variant::Type::FLOAT:
+			return double(p_value);
+		case Variant::Type::STRING:
+			return String(p_value);
+		default:
+			return p_value;
+	}
+}
+
 Ref<ProjectSetting> ProjectSetting::create(
 		const String &p_setting_path,
 		const Variant &p_default_value,
@@ -37,7 +52,7 @@ void ProjectSetting::_validate_property(PropertyInfo &p_property) const {
 			// 对象且未显式指定提示时，提供资源/对象选择器：hint_string 含类名走资源选择，否则通用对象。
 			if (value_type == Variant::Type::OBJECT && type_hint == PropertyHint::PROPERTY_HINT_NONE) {
 				if (hint_string.is_empty()) {
-					p_property.hint = PropertyHint::PROPERTY_HINT_OBJECT_TYPE;
+					p_property.hint = PropertyHint::PROPERTY_HINT_OBJECT_ID;
 				} else {
 					p_property.hint = PropertyHint::PROPERTY_HINT_RESOURCE_TYPE;
 				}

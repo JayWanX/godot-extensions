@@ -10,7 +10,7 @@ class ProjectSetting : public Resource {
 	static void _bind_methods();
 
 protected:
-	virtual void _validate_property(PropertyInfo &p_property) const override;
+	void _validate_property(PropertyInfo &p_property) const;
 
 public:
 	/// 设置路径（含点号分隔的层级名）
@@ -55,6 +55,9 @@ public:
 			bool p_restart_if_changed = false);
 
 private:
+	/// 将 Variant 按目标 Variant 类型转换后返回；无法转换时返回原值。
+	static Variant convert_value_type(const Variant &p_value, Variant::Type p_type);
+
 	String _get_setting_path() const { return setting_path; }
 	void _set_setting_path(const String &p_value) { setting_path = p_value; }
 
@@ -66,8 +69,8 @@ private:
 		value_type = static_cast<Variant::Type>(p_value);
 		// 变更类型时同步转换已有默认值/初始值，保证与 value_type 一致。
 		if (value_type != Variant::Type::NIL) {
-			default_value = Variant::convert(default_value, value_type);
-			initial_value = Variant::convert(initial_value, value_type);
+			default_value = convert_value_type(default_value, value_type);
+			initial_value = convert_value_type(initial_value, value_type);
 		}
 	}
 

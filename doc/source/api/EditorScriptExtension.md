@@ -80,4 +80,4 @@ GDScript 子类通过 extends EditorScriptExtension 重写 main() 实现具体�
 
 供 GDScript 重写的抽象入口。
 
-_生成于 2026-09-11_
+_生成于 2026-09-12_

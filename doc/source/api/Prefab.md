@@ -18,9 +18,9 @@
 
 枚举 **FreeMode**：
 
-- <span id="i_FREE_MODE_INSTANT"></span>**FREE_MODE_INSTANT** = **0**
-- <span id="i_FREE_MODE_DEFERRED"></span>**FREE_MODE_DEFERRED** = **1**
-- <span id="i_FREE_MODE_NONE"></span>**FREE_MODE_NONE** = **2**
+- <span id="i_FREE_MODE_INSTANT"></span>**FREE_MODE_INSTANT** = **0** --- 立即释放源节点。
+- <span id="i_FREE_MODE_DEFERRED"></span>**FREE_MODE_DEFERRED** = **1** --- 延迟释放源节点（当前帧结束）。
+- <span id="i_FREE_MODE_NONE"></span>**FREE_MODE_NONE** = **2** --- 不释放源节点。
 
 
 ## 方法描述
@@ -35,4 +35,4 @@
 
 打包好的 PackedScene 资源。
 
-_生成于 2026-09-11_
+_生成于 2026-09-12_
