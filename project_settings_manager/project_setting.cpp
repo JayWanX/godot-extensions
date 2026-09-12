@@ -96,7 +96,7 @@ void ProjectSetting::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_set_type_hint", "value"), &ProjectSetting::_set_type_hint);
 	ClassDB::bind_method(D_METHOD("_get_type_hint"), &ProjectSetting::_get_type_hint);
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "type_hint"), "_set_type_hint", "_get_type_hint");
+	ADD_PROPERTY(PropertyInfo(Variant::INT, "type_hint", PROPERTY_HINT_ENUM, "NONE,RANGE,ENUM,ENUM_SUGGESTION,EXP_EASING,LINK,FLAGS,LAYERS_2D_RENDER,LAYERS_2D_PHYSICS,LAYERS_2D_NAVIGATION,LAYERS_3D_RENDER,LAYERS_3D_PHYSICS,LAYERS_3D_NAVIGATION,FILE,DIR,GLOBAL_FILE,GLOBAL_DIR,RESOURCE_TYPE,MULTILINE_TEXT,EXPRESSION,PLACEHOLDER_TEXT,COLOR_NO_ALPHA,OBJECT_ID,TYPE_STRING,NODE_PATH_TO_EDITED_NODE,OBJECT_TOO_BIG,NODE_PATH_VALID_TYPES,SAVE_FILE,GLOBAL_SAVE_FILE,INT_IS_OBJECTID,INT_IS_POINTER,ARRAY_TYPE,LOCALE_ID,LOCALIZABLE_STRING,NODE_TYPE,HIDE_QUATERNION_EDIT,PASSWORD,LAYERS_AVOIDANCE,DICTIONARY_TYPE,TOOL_BUTTON,ONESHOT,NO_NODEPATH,GROUP_ENABLE,INPUT_NAME,FILE_PATH"), "_set_type_hint", "_get_type_hint");
 
 	ClassDB::bind_method(D_METHOD("_set_hint_string", "value"), &ProjectSetting::_set_hint_string);
 	ClassDB::bind_method(D_METHOD("_get_hint_string"), &ProjectSetting::_get_hint_string);
