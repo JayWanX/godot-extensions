@@ -19,14 +19,14 @@
 
 比较当前 UUID 与另一个 UUID 是否相等。
 
-**p_other：** 用于比较的另一个 UUID
+**other：** 用于比较的另一个 UUID
 
-**返回：** 两者文本表示相同则返回 true。
+两者文本表示相同则返回 true。
 
 ### [StringName](https://docs.godotengine.org/en/stable/classes/class_stringname.html)<span id="i_generate"></span> **generate**( ) 
 
 生成一个新的随机 UUID。
 
-**返回：** 格式化后的 UUID 文本，如 `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`。
+格式化后的 UUID 文本，如 `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`。
 
 _生成于 2026-09-11_

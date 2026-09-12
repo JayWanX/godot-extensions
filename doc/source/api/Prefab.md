@@ -29,10 +29,10 @@
 
 将指定节点及其子树打包为 PackedScene，并自动修复子节点的 owner 关系。
 
-**p_node：** 要打包的根节点，不能为空
+**node：** 要打包的根节点，不能为空
 
-**p_free_mode：** 打包完成后对源节点的处理方式，见 FreeMode 枚举
+**free_mode：** 打包完成后对源节点的处理方式，见 FreeMode 枚举
 
-**返回：** 打包好的 PackedScene 资源。
+打包好的 PackedScene 资源。
 
 _生成于 2026-09-11_

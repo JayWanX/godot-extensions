@@ -5,4 +5,40 @@
 	</description>
 	<tutorials>
 	</tutorials>
+	<methods>
+		<method name="create" qualifiers="static">
+			<return type="ProjectSetting" />
+			<param index="0" name="setting_path" type="String" />
+			<param index="1" name="default_value" type="Variant" default="null" />
+			<param index="2" name="value_type" type="int" enum="Variant.Type" default="0" />
+			<param index="3" name="initial_value" type="Variant" default="null" />
+			<param index="4" name="type_hint" type="int" enum="PropertyHint" default="0" />
+			<param index="5" name="hint_string" type="String" default="&quot;&quot;" />
+			<param index="6" name="basic" type="bool" default="true" />
+			<param index="7" name="internal" type="bool" default="false" />
+			<param index="8" name="restart_if_changed" type="bool" default="false" />
+			<description>	创建项目设置元数据资源。[br][br]
+	[param setting_path] 设置路径（含点号分隔的层级名）。[br]
+	[param default_value] 默认值（设置不存在时读取）。[br]
+	[param value_type] 值类型（Variant.Type 枚举）。[br]
+	[param initial_value] 初始值（注册设置时写入）。[br]
+	[param type_hint] 编辑器属性提示类型。[br]
+	[param hint_string] 编辑器属性提示字符串。[br]
+	[param basic] 是否显示在基础设置中。[br]
+	[param internal] 是否为内部设置。[br]
+	[param restart_if_changed] 修改后是否需要重启生效。[br]
+	新创建的项目设置资源。</description>
+		</method>
+	</methods>
+	<members>
+		<member name="basic" type="bool" setter="_set_basic" getter="_get_basic" default="true">	是否显示在基础设置中</member>
+		<member name="default_value" type="Variant" setter="_set_default_value" getter="_get_default_value" default="null">	默认值（设置不存在时读取）</member>
+		<member name="hint_string" type="String" setter="_set_hint_string" getter="_get_hint_string" default="&quot;&quot;">	编辑器属性提示字符串</member>
+		<member name="initial_value" type="Variant" setter="_set_initial_value" getter="_get_initial_value" default="null">	初始值（注册设置时写入）</member>
+		<member name="internal" type="bool" setter="_set_internal" getter="_get_internal" default="false">	是否为内部设置</member>
+		<member name="restart_if_changed" type="bool" setter="_set_restart_if_changed" getter="_get_restart_if_changed" default="false">	修改后是否需要重启生效</member>
+		<member name="setting_path" type="String" setter="_set_setting_path" getter="_get_setting_path" default="&quot;&quot;">	设置路径（含点号分隔的层级名）</member>
+		<member name="type_hint" type="int" setter="_set_type_hint" getter="_get_type_hint" default="0">	编辑器属性提示类型</member>
+		<member name="value_type" type="int" setter="_set_value_type" getter="_get_value_type" default="0">	值类型（Variant.Type 枚举）</member>
+	</members>
 </class>
