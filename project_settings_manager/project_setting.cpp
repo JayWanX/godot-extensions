@@ -26,6 +26,29 @@ Ref<ProjectSetting> ProjectSetting::create(
 	return setting;
 }
 
+void ProjectSetting::_validate_property(PropertyInfo &p_property) const {
+	// 使 default_value / initial_value 在检查器中的编辑控件跟随 value_type / type_hint：
+	// 已指定类型时按该类型与提示展示；未指定（NIL）时作为通用 Variant 提供类型选择。
+	if (p_property.name == StringName("default_value") || p_property.name == StringName("initial_value")) {
+		if (value_type != Variant::Type::NIL) {
+			p_property.type = value_type;
+			p_property.hint = type_hint;
+			p_property.hint_string = hint_string;
+			// 对象且未显式指定提示时，提供资源/对象选择器：hint_string 含类名走资源选择，否则通用对象。
+			if (value_type == Variant::Type::OBJECT && type_hint == PropertyHint::PROPERTY_HINT_NONE) {
+				if (hint_string.is_empty()) {
+					p_property.hint = PropertyHint::PROPERTY_HINT_OBJECT_TYPE;
+				} else {
+					p_property.hint = PropertyHint::PROPERTY_HINT_RESOURCE_TYPE;
+				}
+			}
+		} else {
+			p_property.type = Variant::Type::NIL;
+			p_property.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
+		}
+	}
+}
+
 void ProjectSetting::_bind_methods() {
 	// 静态工厂：为带多字段初始化的创建提供入口（引擎类的 new() 固定 0 参数，无法传参）。
 	// 除首参外均提供默认值，使脚本侧可省略尾部参数（仅连续省略末端参数）。
