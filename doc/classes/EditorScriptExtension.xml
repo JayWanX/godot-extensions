@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <class name="EditorScriptExtension" inherits="EditorScript" api_type="core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
-	<brief_description>	EditorScript 的便捷基类：统一管理生命周期并封装常用编辑器辅助方法。
-	GDScript 子类通过 extends EditorScriptExtension 重写 main() 实现具体逻辑。</brief_description>
+	<brief_description>
+		EditorScript 的便捷基类：统一管理生命周期并封装常用编辑器辅助方法。
+		GDScript 子类通过 extends EditorScriptExtension 重写 main() 实现具体逻辑。
+	</brief_description>
 	<description>
 	</description>
 	<tutorials>
