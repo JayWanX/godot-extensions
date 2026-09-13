@@ -96,8 +96,8 @@ func _test_project_settings(runner: TestRunner) -> void:
 	ProjectSettingsManager.remove_setting(setting)
 	runner.assert_eq(ProjectSettingsManager.get_setting(setting), "default_val", "移除后读取应回落默认值")
 
-## 以字节数组写入文件，用于构造测试数据。[br][br]
-## [param path] 文件路径。[br]
+## 以字节数组写入文件，用于构造测试数据。
+## [param path] 文件路径。
 ## [param bytes] 要写入的原始字节。
 func _write_file(path: String, bytes: PackedByteArray) -> void:
 	var file := FileAccess.open(path, FileAccess.WRITE)
